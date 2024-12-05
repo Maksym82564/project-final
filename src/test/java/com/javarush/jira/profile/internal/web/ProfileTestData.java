@@ -44,7 +44,6 @@ public class ProfileTestData {
                         new ContactTo("website", "new.com"),
                         new ContactTo("github", "newGitHub"),
                         new ContactTo("tg", "newTg"),
-                        new ContactTo("vk", "newVk"),
                         new ContactTo("linkedin", "newLinkedin")));
     }
 
