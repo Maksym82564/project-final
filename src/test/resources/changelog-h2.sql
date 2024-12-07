@@ -320,3 +320,8 @@ values ('todo', 'ToDo', 3, 'in_progress,canceled|'),
        ('test', 'Test', 3, 'done,in_progress,canceled|task_tester'),
        ('done', 'Done', 3, 'canceled|'),
        ('canceled', 'Canceled', 3, null);
+
+insert into ACTIVITY (AUTHOR_ID, TASK_ID, UPDATED, STATUS_CODE)
+values (7, 1, '2023-05-16 09:05:10.000000', 'in_progress'),
+       (7, 1, '2023-05-16 12:25:10.000000', 'ready_for_review'),
+       (7, 1, '2023-05-16 14:05:10.000000', 'done');
