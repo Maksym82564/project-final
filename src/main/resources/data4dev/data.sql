@@ -49,7 +49,7 @@ insert into PROFILE (ID, LAST_FAILED_LOGIN, LAST_LOGIN, MAIL_NOTIFICATIONS)
 values (1, null, null, 49),
        (2, null, null, 14);
 
-insert into CONTACT (ID, CODE, VALUE)
+insert into CONTACT (ID, CODE, CONTACT_VALUE)
 values (1, 'skype', 'userSkype'),
        (1, 'mobile', '+01234567890'),
        (1, 'website', 'user.com'),
@@ -324,3 +324,25 @@ values (6, 1, '2023-05-15 09:05:10', null, 'Data', null, 3, 'epic', 'in_progress
        (5, 118, '2023-05-16 11:10:10', null, 'UI tab of tasks', null, null, null, null, 'high'),
        (11, 118, '2023-05-16 12:30:10', null, 'UI tab of tasks', null, 2, null, null, null);
 
+-- user belong populate
+
+insert into USER_BELONG (OBJECT_ID, OBJECT_TYPE, USER_ID, USER_TYPE_CODE, STARTPOINT, ENDPOINT)
+values (1, 2, 2, 'task_developer', '2023-06-14 08:35:10', '2023-06-14 08:55:00'),
+       (1, 2, 2, 'task_reviewer', '2023-06-14 09:35:10', null),
+       (1, 2, 1, 'task_developer', '2023-06-12 11:40:00', '2023-06-12 12:35:00'),
+       (1, 2, 1, 'task_developer', '2023-06-13 12:35:00', null),
+       (1, 2, 1, 'task_tester', '2023-06-14 15:20:00', null),
+       (2, 2, 2, 'task_developer', '2023-06-08 07:10:00', null),
+       (2, 2, 1, 'task_developer', '2023-06-09 14:48:00', null),
+       (2, 2, 1, 'task_tester', '2023-06-10 16:37:00', null);
+-- user belong populate
+
+insert into USER_BELONG (OBJECT_ID, OBJECT_TYPE, USER_ID, USER_TYPE_CODE, STARTPOINT, ENDPOINT)
+values (1, 2, 2, 'task_developer', '2023-06-14 08:35:10', '2023-06-14 08:55:00'),
+       (1, 2, 2, 'task_reviewer', '2023-06-14 09:35:10', null),
+       (1, 2, 1, 'task_developer', '2023-06-12 11:40:00', '2023-06-12 12:35:00'),
+       (1, 2, 1, 'task_developer', '2023-06-13 12:35:00', null),
+       (1, 2, 1, 'task_tester', '2023-06-14 15:20:00', null),
+       (2, 2, 2, 'task_developer', '2023-06-08 07:10:00', null),
+       (2, 2, 1, 'task_developer', '2023-06-09 14:48:00', null),
+       (2, 2, 1, 'task_tester', '2023-06-10 16:37:00', null);
