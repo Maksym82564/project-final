@@ -86,6 +86,17 @@ public class TaskService {
         }
     }
 
+    @Transactional
+    public void addTag(Long taskId, String tag) {
+        if (tag == null || tag.length() < 3 || tag.length() > 32) {
+            throw new IllegalArgumentException("Tag length must be between 3 and 32 characters.");
+        }
+        Task task = handler.getRepository().findById(taskId)
+                .orElseThrow(() -> new NotFoundException("Task not found"));
+        task.getTags().add(tag);
+        handler.getRepository().save(task);
+    }
+
     public TaskToFull get(long id) {
         Task task = Util.checkExist(id, handler.getRepository().findFullById(id));
         TaskToFull taskToFull = fullMapper.toTo(task);

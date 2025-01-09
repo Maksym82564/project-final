@@ -1,0 +1,9 @@
+spring:
+  config:
+    activate:
+      on-profile: prod
+  liquibase:
+    change-log: "classpath:changelog-h2.sql"
+  jpa:
+    hibernate:
+      ddl-auto: validate
